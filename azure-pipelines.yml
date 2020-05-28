@@ -25,5 +25,5 @@ steps:
   inputs:
     buildType: 'current'
     downloadType: 'single'
-    artifactName: 'Maven-az'
+    artifactName: 'webapp.war'
     downloadPath: '$(System.ArtifactsDirectory)'
