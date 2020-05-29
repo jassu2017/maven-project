@@ -21,9 +21,8 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'install'
 
-- task: DownloadBuildArtifacts@0
+- task: PublishPipelineArtifact@1
   inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    artifactName: 'webapp.war'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'webapp.war'
+    publishLocation: 'pipeline'
